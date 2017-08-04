@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<!-- 所有的标签必须按照这个顺序
+(properties?, settings?, typeAliases?, typeHandlers?, 
+objectFactory?, objectWrapperFactory?, reflectorFactory?,
+ plugins?, environments?, databaseIdProvider?, mappers?)
+  -->
+  
+  
+
+<settings>
+   <!-- 开启驼峰命名策略 -->
+   <setting name="mapUnderscoreToCamelCase" value="true"/>
+   <!-- 对于sql中null的处理，默认使用OTHER，改成NULL，否则oracle数据库使用不了 -->
+   <setting name="jdbcTypeForNull" value="NULL"/>
+   <!-- 分部查询中使用懒加载 -->
+  <!--  <setting name="lazyLoadingEnable" value="true"/> -->
+   <setting name="aggressiveLazyLoading" value="false"/>
+   
+    <setting name="logImpl" value="STDOUT_LOGGING"/>
+</settings>
+
+</configuration>
